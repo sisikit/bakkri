@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 
 import { StageProgress } from "@/src/components/game/StageProgress";
 import { TreasureMap } from "@/src/components/game/TreasureMap";
+import { assetUrl } from "@/src/utils/asset-url";
 import type { StageConfig, StageId } from "@/src/utils/stage-data";
 
 type StageShellProps = {
@@ -101,7 +102,7 @@ export function StageShell({
                   alt="Yelling reference hint"
                   className="h-auto w-full object-cover"
                   height={900}
-                  src="/yelling.jpg"
+                  src={assetUrl("yelling.jpg")}
                   width={700}
                 />
               </div>

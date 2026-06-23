@@ -3,6 +3,7 @@
 import { useState } from "react";
 
 import { Waveform } from "@/src/components/game/Waveform";
+import { assetUrl } from "@/src/utils/asset-url";
 
 type Stage2SkyDecryptProps = {
   isHintVisible: boolean;
@@ -26,7 +27,7 @@ export function Stage2SkyDecrypt({
       return;
     }
 
-    const rewardAudio = new Audio("/song/song.m4a");
+    const rewardAudio = new Audio(assetUrl("song/song.m4a"));
     rewardAudio.volume = 0.9;
     window.setTimeout(() => {
       rewardAudio.pause();
@@ -55,7 +56,7 @@ export function Stage2SkyDecrypt({
           alt="Ghost dog radar visual"
           className="ml-16 h-48 w-48 object-contain"
           height={192}
-          src="/ghost.png"
+          src={assetUrl("ghost.png")}
           width={192}
         />
 

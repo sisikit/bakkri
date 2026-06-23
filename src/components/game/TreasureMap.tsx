@@ -7,6 +7,7 @@ import {
   Trophy,
 } from "lucide-react";
 
+import { assetUrl } from "@/src/utils/asset-url";
 import type { StageId } from "@/src/utils/stage-data";
 
 type TreasureMapProps = {
@@ -115,7 +116,7 @@ export function TreasureMap({
               alt="Bakri walking on the treasure map"
               className="h-full w-full rounded-full object-cover"
               height={72}
-              src="/bakri.jpg"
+              src={assetUrl("bakri.jpg")}
               width={72}
             />
             <div className="absolute -bottom-7 left-1/2 -translate-x-1/2 rounded-full border border-[#724224] bg-[#f6dfb4] px-2 py-1 text-[0.5rem] font-semibold uppercase tracking-[0.14em] text-[#603719] shadow-sm sm:-bottom-8 sm:px-3 sm:text-[0.62rem] sm:tracking-[0.2em]">

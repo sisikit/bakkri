@@ -5,6 +5,7 @@ import { useMemo, useState } from "react";
 import { Beaker, Code2, ShieldCheck, Sparkles } from "lucide-react";
 
 import { Certificate } from "@/src/components/game/Certificate";
+import { assetUrl } from "@/src/utils/asset-url";
 
 type Stage6ImmortalityLabProps = {
   actionButtonText: string;
@@ -58,7 +59,7 @@ export function Stage6ImmortalityLab({
   const handleVerifyOathAndInject = () => {
     if (promiseText.trim() === requiredOath) {
       setPromiseError("");
-      const birthdayAudio = new Audio("/song/birthday.m4a");
+      const birthdayAudio = new Audio(assetUrl("song/birthday.m4a"));
       birthdayAudio.volume = 0.9;
       void birthdayAudio.play().catch(() => {
         // Ignore autoplay failures quietly if the browser blocks playback.
@@ -238,7 +239,7 @@ export function Stage6ImmortalityLab({
                   alt="Birthday cake"
                   className="h-157 w-full rounded-[1.5rem] object-cover"
                   height={400}
-                  src="/cake.png"
+                  src={assetUrl("cake.png")}
                   width={900}
                 />
               </div>

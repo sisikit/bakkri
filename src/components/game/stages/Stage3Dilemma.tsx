@@ -1,6 +1,8 @@
 // using native <img> instead of next/image
 import { useEffect, useMemo, useRef, useState } from "react";
 
+import { assetUrl } from "@/src/utils/asset-url";
+
 type Stage3DilemmaProps = {
   onSubmit: (input: string) => boolean;
 };
@@ -79,7 +81,7 @@ export function Stage3Dilemma({ onSubmit }: Stage3DilemmaProps) {
               alt="Bakri sinking in the sea"
               className="h-full w-full rounded-full object-cover"
               height={112}
-              src="/sisiSinking.jpg"
+              src={assetUrl("sisiSinking.jpg")}
               width={112}
             />
           </div>
@@ -116,7 +118,7 @@ export function Stage3Dilemma({ onSubmit }: Stage3DilemmaProps) {
               alt="Sisi rescued on the safe side"
               className="h-80 w-full rounded-[1.2rem] object-cover object-top"
               height={820}
-              src="/sisiSaved.png"
+              src={assetUrl("sisiSaved.png")}
               width={820}
             />
           </div>
