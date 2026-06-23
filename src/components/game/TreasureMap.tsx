@@ -1,4 +1,4 @@
-import Image from "next/image";
+// using native <img> instead of next/image
 import {
   Compass,
   MapPinned,
@@ -110,8 +110,8 @@ export function TreasureMap({
           className="absolute z-20 -translate-x-1/2 -translate-y-1/2"
           style={{ left: `${bakriNode.x}%`, top: `${bakriNode.y}%` }}
         >
-          <div className="bakri-marker relative h-13 w-13 rounded-full border-[3px] border-[#5b2f15] bg-[#fff1d7] p-1 shadow-[0_14px_30px_rgba(55,28,8,0.35)] sm:h-16 sm:w-16 md:h-18 md:w-18">
-            <Image
+            <div className="bakri-marker relative h-13 w-13 rounded-full border-[3px] border-[#5b2f15] bg-[#fff1d7] p-1 shadow-[0_14px_30px_rgba(55,28,8,0.35)] sm:h-16 sm:w-16 md:h-18 md:w-18">
+            <img
               alt="Bakri walking on the treasure map"
               className="h-full w-full rounded-full object-cover"
               height={72}

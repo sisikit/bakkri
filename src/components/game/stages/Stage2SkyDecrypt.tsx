@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+// using native <img> instead of next/image
 import { useState } from "react";
 
 import { Waveform } from "@/src/components/game/Waveform";
@@ -51,7 +51,7 @@ export function Stage2SkyDecrypt({
           </div>
         </div>
         <Waveform />
-        <Image
+        <img
           alt="Ghost dog radar visual"
           className="ml-16 h-48 w-48 object-contain"
           height={192}

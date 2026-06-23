@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+// using native <img> instead of next/image
 import { useMemo, useState } from "react";
 import { Beaker, Code2, ShieldCheck, Sparkles } from "lucide-react";
 
@@ -234,7 +234,7 @@ export function Stage6ImmortalityLab({
 
             <div className="relative z-10 w-full">
               <div className="overflow-hidden rounded-[2rem] border border-amber-200/15 bg-[#2a1607] p-3 shadow-[0_12px_40px_rgba(0,0,0,0.35)]">
-                <Image
+                <img
                   alt="Birthday cake"
                   className="h-157 w-full rounded-[1.5rem] object-cover"
                   height={400}

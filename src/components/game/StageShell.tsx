@@ -1,4 +1,4 @@
-import Image from "next/image";
+// using native <img> instead of next/image
 import { Skull } from "lucide-react";
 import type { ReactNode } from "react";
 
@@ -97,7 +97,7 @@ export function StageShell({
                 yelling at u piece of shit 
               </p>
               <div className="overflow-hidden rounded-[1.5rem] border border-white/10 bg-black/20">
-                <Image
+                <img
                   alt="Yelling reference hint"
                   className="h-auto w-full object-cover"
                   height={900}

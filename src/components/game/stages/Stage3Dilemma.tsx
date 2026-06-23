@@ -1,4 +1,4 @@
-import Image from "next/image";
+// using native <img> instead of next/image
 import { useEffect, useMemo, useRef, useState } from "react";
 
 type Stage3DilemmaProps = {
@@ -74,8 +74,8 @@ export function Stage3Dilemma({ onSubmit }: Stage3DilemmaProps) {
 
         <div className="relative flex min-h-72 items-end justify-center">
           <div className="absolute left-1/2 top-[34%] h-32 w-32 -translate-x-1/2 rounded-full bg-white/10 blur-3xl" />
-          <div className="bakri-sinking absolute left-1/2 top-[46%] z-10 h-28 w-28 -translate-x-1/2 rounded-full border-4 border-white/14 bg-slate-900/50 p-1 shadow-[0_20px_40px_rgba(0,0,0,0.35)]">
-            <Image
+            <div className="bakri-sinking absolute left-1/2 top-[46%] z-10 h-28 w-28 -translate-x-1/2 rounded-full border-4 border-white/14 bg-slate-900/50 p-1 shadow-[0_20px_40px_rgba(0,0,0,0.35)]">
+            <img
               alt="Bakri sinking in the sea"
               className="h-full w-full rounded-full object-cover"
               height={112}
@@ -112,7 +112,7 @@ export function Stage3Dilemma({ onSubmit }: Stage3DilemmaProps) {
         </div>
         {isButtonSaved && (
           <div className="overflow-hidden rounded-[1.6rem] border border-emerald-300/24 bg-slate-950/80 p-3">
-            <Image
+            <img
               alt="Sisi rescued on the safe side"
               className="h-80 w-full rounded-[1.2rem] object-cover object-top"
               height={820}
