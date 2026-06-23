@@ -36,16 +36,16 @@ export function TreasureMap({
   const bakriNode = stageNodes[currentStage];
 
   return (
-    <div className="treasure-map relative overflow-hidden rounded-[2rem] border border-[#6c4322] bg-[linear-gradient(180deg,#f7e0b7_0%,#efd2a1_46%,#dfb882_100%)] p-5 text-[#55311d] shadow-[0_24px_90px_rgba(35,19,7,0.42)]">
+    <div className="treasure-map relative overflow-hidden rounded-[2rem] border border-[#6c4322] bg-[linear-gradient(180deg,#f7e0b7_0%,#efd2a1_46%,#dfb882_100%)] p-3 text-[#55311d] shadow-[0_24px_90px_rgba(35,19,7,0.42)] sm:p-4 lg:p-5">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,248,220,0.5),_transparent_25%),radial-gradient(circle_at_bottom,_rgba(109,67,34,0.14),_transparent_38%)]" />
       <div className="absolute inset-0 opacity-[0.22] [background-image:radial-gradient(rgba(93,54,27,0.45)_0.8px,transparent_0.8px)] [background-size:14px_14px]" />
 
-      <div className="relative mb-5 flex items-start justify-between gap-4">
+      <div className="relative mb-4 flex items-start justify-between gap-3 sm:mb-5 sm:gap-4">
         <div>
-          <p className="text-[0.68rem] uppercase tracking-[0.34em] text-[#89552e]">
+          <p className="text-[0.56rem] uppercase tracking-[0.28em] text-[#89552e] sm:text-[0.68rem] sm:tracking-[0.34em]">
             Route Of Bakri
           </p>
-          <h3 className="mt-2 text-2xl font-semibold text-[#5a3319]">
+          <h3 className="mt-1.5 text-lg font-semibold text-[#5a3319] sm:mt-2 sm:text-2xl">
             Parchment Navigation Board
           </h3>
         </div>
@@ -56,7 +56,7 @@ export function TreasureMap({
         </div>
       </div>
 
-      <div className="relative h-[430px] overflow-hidden rounded-[1.7rem] border border-[#88542c] bg-[linear-gradient(180deg,rgba(255,248,227,0.34),rgba(162,102,54,0.12))] p-4 md:h-[500px]">
+      <div className="relative aspect-[4/5] min-h-[360px] w-full overflow-hidden rounded-[1.7rem] border border-[#88542c] bg-[linear-gradient(180deg,rgba(255,248,227,0.34),rgba(162,102,54,0.12))] p-3 sm:aspect-[16/11] sm:min-h-[420px] sm:p-4 lg:aspect-[16/10] lg:max-h-[560px]">
         <svg
           aria-hidden
           className="absolute inset-0 h-full w-full"
@@ -88,17 +88,17 @@ export function TreasureMap({
             >
               <div
                 className={[
-                  "flex h-24 w-28 flex-col items-center justify-center rounded-[44%_56%_52%_48%/42%_45%_55%_58%] border border-[#8f5f39] bg-[radial-gradient(circle_at_top,_rgba(255,249,233,0.8),rgba(241,203,152,0.95)_56%,rgba(213,162,103,1)_100%)] px-3 text-center shadow-[0_10px_30px_rgba(80,44,18,0.18)]",
+                  "flex h-18 w-20 flex-col items-center justify-center rounded-[44%_56%_52%_48%/42%_45%_55%_58%] border border-[#8f5f39] bg-[radial-gradient(circle_at_top,_rgba(255,249,233,0.8),rgba(241,203,152,0.95)_56%,rgba(213,162,103,1)_100%)] px-2 text-center shadow-[0_10px_30px_rgba(80,44,18,0.18)] sm:h-22 sm:w-24 sm:px-3 md:h-24 md:w-28",
                   isActive ? "ring-2 ring-[#9f2417]/55" : "",
                 ].join(" ")}
               >
-                <div className="mb-1 flex h-8 w-8 items-center justify-center rounded-full border border-[#754623] bg-[#f7e2ba] text-xs font-semibold">
+                <div className="mb-1 flex h-6 w-6 items-center justify-center rounded-full border border-[#754623] bg-[#f7e2ba] text-[0.62rem] font-semibold sm:h-7 sm:w-7 sm:text-xs md:h-8 md:w-8">
                   {node.id}
                 </div>
-                <div className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-[#5a3319]">
+                <div className="text-[0.52rem] font-semibold uppercase tracking-[0.12em] text-[#5a3319] sm:text-[0.62rem] sm:tracking-[0.15em] md:text-[0.7rem] md:tracking-[0.18em]">
                   {node.label}
                 </div>
-                <div className="mt-1 text-[0.62rem] text-[#8a572f]">
+                <div className="mt-1 text-[0.48rem] text-[#8a572f] sm:text-[0.56rem] md:text-[0.62rem]">
                   {isCompleted ? "Solved" : isActive ? "Bakri here" : "Locked"}
                 </div>
               </div>
@@ -110,7 +110,7 @@ export function TreasureMap({
           className="absolute z-20 -translate-x-1/2 -translate-y-1/2"
           style={{ left: `${bakriNode.x}%`, top: `${bakriNode.y}%` }}
         >
-          <div className="bakri-marker relative h-18 w-18 rounded-full border-[3px] border-[#5b2f15] bg-[#fff1d7] p-1 shadow-[0_14px_30px_rgba(55,28,8,0.35)]">
+          <div className="bakri-marker relative h-13 w-13 rounded-full border-[3px] border-[#5b2f15] bg-[#fff1d7] p-1 shadow-[0_14px_30px_rgba(55,28,8,0.35)] sm:h-16 sm:w-16 md:h-18 md:w-18">
             <Image
               alt="Bakri walking on the treasure map"
               className="h-full w-full rounded-full object-cover"
@@ -118,17 +118,17 @@ export function TreasureMap({
               src="/bakri.jpg"
               width={72}
             />
-            <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 rounded-full border border-[#724224] bg-[#f6dfb4] px-3 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.2em] text-[#603719] shadow-sm">
+            <div className="absolute -bottom-7 left-1/2 -translate-x-1/2 rounded-full border border-[#724224] bg-[#f6dfb4] px-2 py-1 text-[0.5rem] font-semibold uppercase tracking-[0.14em] text-[#603719] shadow-sm sm:-bottom-8 sm:px-3 sm:text-[0.62rem] sm:tracking-[0.2em]">
               Bakri
             </div>
           </div>
         </div>
 
-        <div className="absolute left-4 top-4 rounded-full border border-[#7b4b25] bg-[#edd3ab] p-3 text-[#5d371d] shadow-sm">
-          <Compass className="h-7 w-7" />
+        <div className="absolute left-3 top-3 rounded-full border border-[#7b4b25] bg-[#edd3ab] p-2 text-[#5d371d] shadow-sm sm:left-4 sm:top-4 sm:p-3">
+          <Compass className="h-5 w-5 sm:h-7 sm:w-7" />
         </div>
 
-        <div className="absolute bottom-5 right-4 flex flex-col gap-2">
+        <div className="absolute bottom-3 right-3 flex max-w-[42vw] flex-col gap-2 sm:bottom-5 sm:right-4 sm:max-w-none">
           <LegendPill icon={<MapPinned className="h-4 w-4" />} text="Current route" />
           <LegendPill icon={<Trophy className="h-4 w-4" />} text="Solved island" />
           <LegendPill icon={<ScrollText className="h-4 w-4" />} text="CTF stage note" />
@@ -151,7 +151,7 @@ function MapDecoration() {
       {decorations.map((item, index) => (
         <div
           key={`${item.x}-${item.y}-${index}`}
-          className="absolute h-8 w-8 rounded-full border border-[#8d5d36]/60 bg-[#f8e8c6]/70"
+          className="absolute h-5 w-5 rounded-full border border-[#8d5d36]/60 bg-[#f8e8c6]/70 sm:h-6 sm:w-6 md:h-8 md:w-8"
           style={{
             left: `${item.x}%`,
             top: `${item.y}%`,
@@ -169,7 +169,7 @@ type CornerIconProps = {
 
 function CornerIcon({ icon }: CornerIconProps) {
   return (
-    <div className="rounded-full border border-[#87532d] bg-[#f2d9af] p-2 text-[#6b3f1f] shadow-sm">
+    <div className="rounded-full border border-[#87532d] bg-[#f2d9af] p-1.5 text-[#6b3f1f] shadow-sm sm:p-2">
       {icon}
     </div>
   );
@@ -182,7 +182,7 @@ type LegendPillProps = {
 
 function LegendPill({ icon, text }: LegendPillProps) {
   return (
-    <div className="flex items-center gap-2 rounded-full border border-[#88532b] bg-[#f6dfb5]/95 px-3 py-2 text-[0.65rem] uppercase tracking-[0.2em] text-[#6b3b1b] shadow-sm">
+    <div className="flex items-center gap-1.5 rounded-full border border-[#88532b] bg-[#f6dfb5]/95 px-2 py-1.5 text-[0.48rem] uppercase tracking-[0.12em] text-[#6b3b1b] shadow-sm sm:gap-2 sm:px-3 sm:py-2 sm:text-[0.65rem] sm:tracking-[0.2em]">
       {icon}
       <span>{text}</span>
     </div>
