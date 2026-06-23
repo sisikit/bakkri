@@ -111,7 +111,7 @@ export function BirthdayCtfApp() {
               Sequential flow: Stage {currentStage} / 6
             </StatusBadge>
             <StatusBadge icon={<Headphones className="h-4 w-4" />}>
-              {isAudioRewardActive ? "Reward audio active" : "Audio locked"}
+              {isAudioRewardActive ? "Reward audio active" : "happy 24-06"}
             </StatusBadge>
             <button
               type="button"

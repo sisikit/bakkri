@@ -62,8 +62,7 @@ export const STAGES: StageConfig[] = [
     coordinates: { lat: 33.545, lng: 36.315 },
     challengeType: "CSS_VALIDATION",
     mechanics:
-      "اكتب قاعدة CSS كاملة تستهدف `.paper` وتحوّل اللون إلى الأخضر المستوحى من جامع الفيصل.",
-    correctAnswerRegex:
+"find the anonymous proccess that is running in the background and deal with it ",    correctAnswerRegex:
       "^(\\s*\\.paper\\s*\\{\\s*color\\s*:\\s*(green|#00ff00)\\s*;?\\s*\\}\\s*)$",
     onSuccessEffect:
       "Forest-mode enabled. Off-grid 4x4 route synced to the next checkpoint.",
